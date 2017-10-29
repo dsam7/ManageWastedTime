@@ -5,7 +5,7 @@
     "description":"Helping to study without getting distracted by providing a timer
      to monitor your internet usage",
     "browser_action": {
-        "default_icon":".png",
+        "default_icon":"logo.png",
         "default_title":"Manage Wasted Time",
         "default_popup":"extension.html"
     },

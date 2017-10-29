@@ -1,0 +1,23 @@
+body {
+    height: 200px;
+    width: 500px;
+    text-align: center;
+}
+
+#on, #off {
+    height: 30px;
+    width: 50px;
+    border-radius: 8px;
+    border-radius: 8px;
+    size: 30px;
+}
+#on:hover {
+    background-color: green;
+}
+#off:hover {
+    background-color: red;
+}
+
+#content {
+    vertical-align: middle;
+}
