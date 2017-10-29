@@ -7,9 +7,11 @@ body {
 #on, #off {
     height: 30px;
     width: 50px;
-    border-radius: 8px;
-    border-radius: 8px;
+    border-radius: 15px;
+    border-radius: 15px;
+    font-weight: bolder;
     size: 30px;
+    padding: 5px;
 }
 #on:hover {
     background-color: green;
