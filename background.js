@@ -9,6 +9,7 @@ var numOfLinks = 0;
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         console.log(history);
+	isAcademic = false;
         if (on === true) {
             console.log(request);
             startTime = new Date();
