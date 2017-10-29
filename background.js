@@ -1,8 +1,6 @@
 var startTime, endTime, diff;
 var on = false, isAcademic = false;
-var academic = ["pearsonmylabandmastering",
-"portal.mypearson", "tophat", "github", "w3schools",
-"stackoverflow"];
+var academic = ["google", "bing", "cnn", "fox", "time", "nationalgeographic", "discovery", "pearson", "tophat", "github", "w3schools", "stackoverflow"];
 // var link = {website: "", academic : false, startTime : new Date(), endTime: new Date()};
 // var history = new Array();
 // var numOfLinks = 0;
@@ -31,9 +29,12 @@ chrome.runtime.onMessage.addListener(
                     counter++;
                 }
                 console.log("loop finished");
+		if (!isAcademic) {
+		    alert("Warning: Site may distract you!");
+		}
             }
             var link = {website: request, academic : isAcademic, startTime : startTime, endTime : new Date()};
-            sendResponse(isTrue);
+            sendResponse(isAcademic);
             // console.log(link);
             // history[numOfLinks] = link;
             // console.log(history);
