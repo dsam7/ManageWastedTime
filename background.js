@@ -4,11 +4,13 @@ var academic = ["pearsonmylabandmastering",
 "portal.mypearson", "tophat", "github", "w3schools",
 "stackoverflow"];
 // var link = {website: "", academic : false, startTime : new Date(), endTime: new Date()};
-var history = new Array();
-var numOfLinks = 0;
+// var history = new Array();
+// var numOfLinks = 0;
+
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        console.log(history);
+        // console.log(history);
+        isAcademic = false;
         if (on === true) {
             console.log(request);
             startTime = new Date();
@@ -31,10 +33,10 @@ chrome.runtime.onMessage.addListener(
                 console.log("loop finished");
             }
             var link = {website: request, academic : isAcademic, startTime : startTime, endTime : new Date()};
-            console.log(link);
-            history[numOfLinks] = link;
-            console.log(history);
-            numOfLinks++;
+            sendResponse(isTrue);
+            // console.log(link);
+            // history[numOfLinks] = link;
+            // console.log(history);
         }
         if (request === "on") {
             on = true;
